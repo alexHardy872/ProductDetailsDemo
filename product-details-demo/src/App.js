@@ -1,5 +1,6 @@
 import './App.css';
 import ProductList from './components/ProductList';
+import Header from './components/Header';
 import { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
@@ -41,6 +42,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Header/>
+        <div className='under-header'>
+          
+        
         <div className='row'>
           <div className='col-md-5'>
             <Link to='/products'><h1>Products</h1></Link>
@@ -57,11 +62,12 @@ function App() {
             selectProduct={changeSelectedProduct}/>}
         </>
       )}/>
-      <Route path={`/products/${currentProduct.id}`} render={(props) => (
+      {/* <Route path={`/products/${currentProduct.id}`} render={(props) => (
         <>
         <h1> productId</h1>
         </>
-      )} />
+      )} /> */}
+    </div>
     </div>
     </Router>
   );
