@@ -1,0 +1,27 @@
+{
+    "Products": [
+        {
+            "id": "996f3775-d234-4cba-b827-7b53ceee9db4",
+            "name": "Test Project 1",
+            "description": "Product Description one...",
+            "images": [
+                {
+                    "id": "2ab63e7c-75c4-486b-830a-1077704eea9d",
+                    "attribute": "0f54fc55-1285-46fe-ba7c-713ae17917d9"
+                }
+            ]
+        }
+    ],
+    "Assets": [
+        {
+            "id": "2ab63e7c-75c4-486b-830a-1077704eea9d",
+            "src": "https://www.milwaukeetool.com/-/media/Products/Power-Tools/Cordless/Drills/2701-20_2.png?mw=520&mh=520&hash=EFE5A6B5575724FBAD68E5FC9EF42ABA"
+        }
+    ],
+    "Attributes": [
+        {
+            "id": "0f54fc55-1285-46fe-ba7c-713ae17917d9",
+            "name": "Main Image"
+        }
+    ]
+}
