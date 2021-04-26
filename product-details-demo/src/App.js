@@ -1,13 +1,16 @@
 import './App.css';
 import ProductList from './components/ProductList';
+import ProductDetails from './components/ProductDetails';
 import Header from './components/Header';
+import Button from './components/Button';
 import { useState, useEffect } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, useHistory, useParams} from 'react-router-dom';
 
 function App() {
   const [products, setProducts] = useState([])
   const [images, setImages] = useState([])
   const [currentProduct, selectProduct ] = useState()
+
 
   useEffect(() => {
     const getProducts = async () => {
@@ -44,31 +47,33 @@ function App() {
       <div className="App">
         <Header/>
         <div className='under-header'>
-          
-        
-        <div className='row'>
-          <div className='col-md-5'>
-            <Link to='/products'><h1>Products</h1></Link>
+          <Route path='/' exact render={(props) => (
+            <div>
+              <Button text='Products'/>
+              <Button text='Images'/>
             </div>
-          <div className='col-md-5'>
-            <Link to='/images'><h1>Images</h1></Link>
-            </div>
+          )}/>
+      
+          <Route path='/products' exact render={(props) => (
+            <>
+              {products.length > 0 && <ProductList 
+                products={products} 
+                images={images}
+                selectProduct={changeSelectedProduct}/>}
+            </>
+          )}/>
+           <Route path='/images' exact render={(props) => (
+            <div>
+              <h1>Images comming soon!</h1>
+              </div>
+          )}/>
+          <Route path={`/products/:id`} render={(props) => (
+            <>
+            <h1> product detail page </h1>
+            </>
+          )} />
         </div>
-      <Route path='/products' exact render={(props) => (
-        <>
-          {products.length > 0 && <ProductList 
-            products={products} 
-            images={images}
-            selectProduct={changeSelectedProduct}/>}
-        </>
-      )}/>
-      {/* <Route path={`/products/${currentProduct.id}`} render={(props) => (
-        <>
-        <h1> productId</h1>
-        </>
-      )} /> */}
-    </div>
-    </div>
+      </div>
     </Router>
   );
 }

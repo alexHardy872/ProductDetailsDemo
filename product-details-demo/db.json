@@ -3,6 +3,7 @@
         {
             "id": "996f3775-d234-4cba-b827-7b53ceee9db4",
             "name": "Milwaukee Tool Drill",
+            "productcode": "PC11032",
             "description": "Product Description one...",
             "images": [
                 {
@@ -14,6 +15,7 @@
         {
             "id": "a096f3775-d234-4cba-b827-7b53ceee9db4",
             "name": "Milwaukee Tool Saw",
+            "productcode": "PC11033",
             "description": "Product Description two...",
             "images": [
                 {
@@ -25,6 +27,7 @@
         {
             "id": "0096f3775-d234-4cba-b827-7b53ceee9db4",
             "name": "Milwaukee Tool Bag",
+            "productcode": "PC88001",
             "description": "Product Description three...",
             "images": [
                 {
