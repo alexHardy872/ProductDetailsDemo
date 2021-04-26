@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.image-thumbnail{
+  height: 100px;
+  width: 100px;
+}
+
+.products-list{
+  width: 100%;
+}
+
+.list-product{
+  border: 1px solid black;
+  padding: 10px;
+
+}
+
+.list-product-details{
+  display: inline-block;
+}
+
+.list-product-name{
+  cursor: pointer;
+}
+

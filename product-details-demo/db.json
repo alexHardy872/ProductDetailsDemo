@@ -2,7 +2,7 @@
     "Products": [
         {
             "id": "996f3775-d234-4cba-b827-7b53ceee9db4",
-            "name": "Test Project 1",
+            "name": "Milwaukee Tool Drill",
             "description": "Product Description one...",
             "images": [
                 {
@@ -10,12 +10,42 @@
                     "attribute": "0f54fc55-1285-46fe-ba7c-713ae17917d9"
                 }
             ]
+        },
+        {
+            "id": "a096f3775-d234-4cba-b827-7b53ceee9db4",
+            "name": "Milwaukee Tool Saw",
+            "description": "Product Description two...",
+            "images": [
+                {
+                    "id": "3bb63e7c-75c4-486b-830a-1077704eea9d",
+                    "attribute": "0f54fc55-1285-46fe-ba7c-713ae17917d9"
+                }
+            ]
+        },
+        {
+            "id": "0096f3775-d234-4cba-b827-7b53ceee9db4",
+            "name": "Milwaukee Tool Bag",
+            "description": "Product Description three...",
+            "images": [
+                {
+                    "id": "4aa63e7c-75c4-486b-830a-1077704eea9d",
+                    "attribute": "0f54fc55-1285-46fe-ba7c-713ae17917d9"
+                }
+            ]
         }
     ],
-    "Assets": [
+    "Images": [
         {
             "id": "2ab63e7c-75c4-486b-830a-1077704eea9d",
             "src": "https://www.milwaukeetool.com/-/media/Products/Power-Tools/Cordless/Drills/2701-20_2.png?mw=520&mh=520&hash=EFE5A6B5575724FBAD68E5FC9EF42ABA"
+        },
+        {
+            "id": "3bb63e7c-75c4-486b-830a-1077704eea9d",
+            "src": "https://images-na.ssl-images-amazon.com/images/I/61BXmOPMM6L._AC_SL1000_.jpg"
+        },
+        {
+            "id": "4aa63e7c-75c4-486b-830a-1077704eea9d",
+            "src": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/768AAOSwT5RdnLHb/$_57.JPG?set_id=8800005007"
         }
     ],
     "Attributes": [
