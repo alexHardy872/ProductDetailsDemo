@@ -1,8 +1,8 @@
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Button = ({text}) => {
     return (
-        <div>
+        <div className='inline'>
             <Link to={'/'+text}>
                 <button className='big-btn pointer'>{text}</button>
             </Link>

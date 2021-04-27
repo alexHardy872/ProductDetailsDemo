@@ -1,19 +1,21 @@
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
-const ListProduct = ({product, mainImage, selectProduct}) => {
+const ListProduct = ({ product, mainImage }) => {
     return (
         <div className='row list-product'>
             <div className='col-sm-3'>
-                <img className='list-product-details'src={mainImage} className='image-thumbnail'></img>
+                <img className='list-product-details image-thumbnail' 
+                    src={mainImage} alt={product.name}></img>
                 </div>
             <div className='col-sm-3'>
                 <Link to={`/products/${product.id}`}>
-                    <p className='list-product-details list-product-name'
-                    onClick={() => selectProduct(product)}
-                    ><b>{product.name}</b></p>        
+                    <p className='list-product-details pointer'><b>{product.name}</b></p>        
                 </Link>
                 </div>
-            <div className='col-sm-3'>
+            <div className='col-sm-2'>
+                <p className='list-product-details'>{product.productcode}</p>
+            </div> 
+            <div className='col-sm-2'>
                 <p className='list-product-details'>{product.description}</p>
             </div> 
         </div>

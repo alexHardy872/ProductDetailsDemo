@@ -1,5 +1,5 @@
 import knownIds from '../references/knownIds'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 const Header = () => {
     return (
