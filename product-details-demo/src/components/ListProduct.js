@@ -1,22 +1,19 @@
 import { Link} from 'react-router-dom';
 
-const ListProduct = ({ product, mainImage }) => {
+const ListProduct = ({ productId, name, code, mainImage }) => {
     return (
         <div className='row list-product'>
             <div className='col-sm-3'>
                 <img className='list-product-details image-thumbnail' 
-                    src={mainImage} alt={product.name}></img>
+                    src={mainImage} alt={name}></img>
                 </div>
             <div className='col-sm-3'>
-                <Link to={`/products/${product.id}`}>
-                    <p className='list-product-details pointer'><b>{product.name}</b></p>        
+                <Link to={`/products/${productId}`}>
+                    <p className='list-product-details pointer'><b>{name}</b></p>        
                 </Link>
                 </div>
             <div className='col-sm-2'>
-                <p className='list-product-details'>{product.productcode}</p>
-            </div> 
-            <div className='col-sm-2'>
-                <p className='list-product-details'>{product.description}</p>
+                <p className='list-product-details'>{code}</p>
             </div> 
         </div>
       

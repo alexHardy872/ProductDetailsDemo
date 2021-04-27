@@ -2,9 +2,20 @@
     "Products": [
         {
             "id": "996f3775-d234-4cba-b827-7b53ceee9db4",
-            "name": "Milwaukee Tool Drill",
-            "productcode": "PC11032",
-            "description": "Product Description one...",
+            "attributes": [
+                {
+                    "id": "a094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Milwaukee Tool Drill"
+                },
+                {
+                    "id": "b094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "PC11032"
+                },
+                {
+                    "id": "c094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Product Description one...this will be for a more in depth description of the product that may go on for one sentence OR several sentences..."
+                }
+            ],
             "images": [
                 {
                     "id": "2ab63e7c-75c4-486b-830a-1077704eea9d",
@@ -26,9 +37,20 @@
         },
         {
             "id": "a096f3775-d234-4cba-b827-7b53ceee9db4",
-            "name": "Milwaukee Tool Saw",
-            "productcode": "PC11033",
-            "description": "Product Description two...",
+            "attributes": [
+                {
+                    "id": "a094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Milwaukee Tool Saw"
+                },
+                {
+                    "id": "b094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "PC11033"
+                },
+                {
+                    "id": "c094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Product Description two... this will be for a more in depth description of the product that may go on for one sentence OR several sentences.."
+                }
+            ],
             "images": [
                 {
                     "id": "3bb63e7c-75c4-486b-830a-1077704eea9d",
@@ -50,9 +72,20 @@
         },
         {
             "id": "0096f3775-d234-4cba-b827-7b53ceee9db4",
-            "name": "Milwaukee Tool Bag",
-            "productcode": "PC88001",
-            "description": "Product Description three...",
+            "attributes": [
+                {
+                    "id": "a094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Milwaukee Tool Bag"
+                },
+                {
+                    "id": "b094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "PC88001"
+                },
+                {
+                    "id": "c094fc55-1285-46fe-ba7c-713ae17917d9",
+                    "value": "Product Description three...this will be for a more in depth description of the product that may go on for one sentence OR several sentences.."
+                }
+            ],
             "images": [
                 {
                     "id": "4aa63e7c-75c4-486b-830a-1077704eea9d",
@@ -102,19 +135,38 @@
     "Attributes": [
         {
             "id": "0f54fc55-1285-46fe-ba7c-713ae17917d9",
-            "name": "Main Image"
+            "name": "Main Image",
+            "isImage": true
         },
         {
             "id": "4554fc55-1285-46fe-ba7c-713ae17917d9",
-            "name": "Detail Image 01"
+            "name": "Detail Image 01",
+            "isImage": true
         },
         {
             "id": "7654fc55-1285-46fe-ba7c-713ae17917d9",
-            "name": "Detail Image 02"
+            "name": "Detail Image 02",
+            "isImage": true
         },
         {
             "id": "8754fc55-1285-46fe-ba7c-713ae17917d9",
-            "name": "Detail Image 03"
+            "name": "Detail Image 03",
+            "isImage": true
+        },
+        {
+            "id": "a094fc55-1285-46fe-ba7c-713ae17917d9",
+            "name": "Product Name",
+            "isImage": false
+        },
+        {
+            "id": "b094fc55-1285-46fe-ba7c-713ae17917d9",
+            "name": "Product Code",
+            "isImage": false
+        },
+        {
+            "id": "c094fc55-1285-46fe-ba7c-713ae17917d9",
+            "name": "Description",
+            "isImage": false
         }
     ]
 }

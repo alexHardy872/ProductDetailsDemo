@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom'
 
-const Button = ({text}) => {
+const Button = ({text, action, big}) => {
     return (
         <div className='inline'>
-            <Link to={'/'+text}>
-                <button className='big-btn pointer'>{text}</button>
+            <Link to={'/'+action}>
+                <button className={big ? 'big-btn' : 'norm=btn'}>{text}</button>
             </Link>
         </div>
     )

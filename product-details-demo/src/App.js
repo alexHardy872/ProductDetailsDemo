@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 function App() {
   const [products, setProducts] = useState([])
   const [images, setImages] = useState([])
+  const [attributes, setAttributes] = useState([])
 
   useEffect(() => {
     const getProducts = async () => {
@@ -21,9 +22,16 @@ function App() {
       setImages(imagesFromServer)
     }
 
+    const getAttributes = async () => {
+      const attributesFromServer = await fetchEntities('Attributes');
+      setAttributes(attributesFromServer)
+    }
+
     getProducts();
 
     getImages();
+
+    getAttributes();
     
   }, [])
 
@@ -43,8 +51,8 @@ function App() {
             <div className='full'>
               <h2 className='center'>Welcome to the demoDb viewer!</h2>
               <div className='inline'>
-                <Button text='Products'/>
-                <Button text='Images'/>
+                <Button text='Products' action='Products' big={true}/>
+                <Button text='Images' action='Images' big={true}/>
               </div>
             </div>
           )}/>
@@ -53,7 +61,8 @@ function App() {
             <>
               {products.length > 0 && <ProductList 
                 products={products} 
-                images={images}/>}
+                images={images}
+                attributes={attributes}/>}
             </>
           )}/>
            <Route path='/images' exact render={(props) => (
@@ -63,7 +72,7 @@ function App() {
           )}/>
           <Route path={`/products/:id`} render={(props) => (
             <>
-            <h1> product detail page </h1>
+
             <ProductDetails/>
             </>
           )} />

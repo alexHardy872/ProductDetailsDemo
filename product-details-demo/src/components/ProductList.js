@@ -2,7 +2,7 @@ import ListProduct from './ListProduct'
 import knownIds from '../references/knownIds'
 import Search from '../components/Search';
 
-const ProductList = ({products, images }) => {
+const ProductList = ({products, images, attributes }) => {
     const getMainImageSrc = (product) => {
         const imageId = product.images
         .filter((image) => image.attribute === knownIds.mainProductImage)[0].id;
@@ -16,6 +16,16 @@ const ProductList = ({products, images }) => {
         }
 
     }
+    const getAttributeValue = (product, attributeId) => {
+        const targetAtt = product.attributes
+        .filter((att) => att.id === attributeId)[0];
+
+        if(targetAtt){
+            return targetAtt.value;
+        }
+        return 'NO INFORMATION'
+    }
+
     return (
         <div>
             <Search/>
@@ -23,7 +33,9 @@ const ProductList = ({products, images }) => {
             {products.map((product) => (
                 <ListProduct 
                     key={product.id} 
-                    product={product} 
+                    productId={product.id}
+                    name={getAttributeValue(product, knownIds.productName)} 
+                    code={getAttributeValue(product, knownIds.productCode)}
                     mainImage={getMainImageSrc(product)}
                 />))}
             </div>
