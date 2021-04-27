@@ -82,12 +82,14 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <Button text='Return to list' action='products' big={false}/>
-            {product !== null && <div>
-                <h1>{getAttributeValue(product, knownIds.productName)}</h1>
-                <div className='container'>
-                    <div className='row'>
-                    <div className='col-md-3'>
+            <div className='float-left'>
+                <Button text='Return to list' action='products' big={false}/>
+            </div>
+            {product !== null && 
+            <div>
+                <div className='flex-container page-pad-big'>
+
+                    <div className='image-selector'>
                         {product.images
                             .filter((image) => image.attribute !== focusedImage)
                             .map((unFocused) => (
@@ -98,19 +100,34 @@ const ProductDetails = () => {
                                         src={getImageSrc(product, unFocused.attribute)}
                                         alt={getAttributeName(unFocused.attribute)}
                                         />
-                                        <p>{getAttributeName(unFocused.attribute)}</p>
                                 </div>                          
                             ))}
                         </div>
-                        <div className='col-md-4'>
+                        <div className='main-image'>
                             <img
                                 className='focused-image'
                                 src={getImageSrc(product, focusedImage)} 
                                 alt={getAttributeName(focusedImage)}/>
                                 <p>{getAttributeName(focusedImage)}</p>
-                        </div>                  
+                        </div>  
+                        <div className='details'>
+                            <h1 className='left product-name'>{getAttributeValue(product, knownIds.productName)}</h1>
+                            {product.attributes
+                            .filter((att) => att.id !== knownIds.productName)
+                            .map((attribute) => (
+                                <div className='full' key={attribute.id}>
+                                    <div className='half inline top left att-name'>
+                                        <p>{getAttributeName(attribute.id)}</p>
+                                    </div>
+                                    <div className='half inline top left att-val'>
+                                        <p>{attribute.value}</p>
+                                    </div>
+                                </div>
+                            ))}
+           
+                        </div>                
                     </div>
-                </div>          
+                        
             </div> }
          </div>  
     )

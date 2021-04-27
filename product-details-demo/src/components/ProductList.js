@@ -1,8 +1,13 @@
 import ListProduct from './ListProduct'
 import knownIds from '../references/knownIds'
 import Search from '../components/Search';
+import { useState } from 'react';
 
-const ProductList = ({products, images, attributes }) => {
+const ProductList = ({products, images}) => {
+
+    const [filteredProducts, setFilteredProducts] = useState(products)
+
+
     const getMainImageSrc = (product) => {
         const imageId = product.images
         .filter((image) => image.attribute === knownIds.mainProductImage)[0].id;
@@ -14,7 +19,6 @@ const ProductList = ({products, images, attributes }) => {
         }else{
             return 'no image found';
         }
-
     }
     const getAttributeValue = (product, attributeId) => {
         const targetAtt = product.attributes
@@ -26,11 +30,29 @@ const ProductList = ({products, images, attributes }) => {
         return 'NO INFORMATION'
     }
 
+    const filterResultsOnSearchTerm = (term) => {
+        if(term === ''){
+            setFilteredProducts(products);
+        }
+        else
+        {   
+        const currentAttributes = 
+        products.filter((p) => 
+            getAttributeValue(p, knownIds.productName).toString()
+                .toUpperCase().includes(term.toUpperCase()) || 
+                getAttributeValue(p, knownIds.productCode).toString()
+                .toUpperCase().includes(term.toUpperCase())
+        );
+            setFilteredProducts(currentAttributes)
+        }
+    }
+
     return (
         <div>
-            <Search/>
-            <div className='container products-list'>
-            {products.map((product) => (
+            <Search executeSearch={filterResultsOnSearchTerm}/>
+            {filteredProducts && <>
+                <div className='container products-list'>
+            {filteredProducts.map((product) => (
                 <ListProduct 
                     key={product.id} 
                     productId={product.id}
@@ -39,8 +61,8 @@ const ProductList = ({products, images, attributes }) => {
                     mainImage={getMainImageSrc(product)}
                 />))}
             </div>
-        </div>
-      
+            </> }  
+        </div> 
     )
 }
 

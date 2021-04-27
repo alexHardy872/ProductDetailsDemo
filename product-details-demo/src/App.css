@@ -13,20 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -45,6 +31,7 @@
 
 .mke-logo{
   float: left;
+  margin-left:20px;
 }
 
 .image-thumbnail{
@@ -58,14 +45,15 @@
 }
 
 .focused-image{
-  height: 400px;
-  width: 400px;
+  height: 470px;
+  width: 470px;
 }
 
 .image-container{
   height: 150px;
   width: 150px;
   position: relative;
+  margin: 5px;
 }
 
 .image-container:after {
@@ -93,19 +81,21 @@
 }
 
 .list-product{
-  border: 1px solid black;
+  background-image: linear-gradient(to right, rgba(3, 3, 3, 0.932), rgba(136, 136, 136, 0.562));
   padding: 10px;
-
+  border-radius: 15px;
+  border: 4pt solid #db011c;
+  margin: 10px;
 }
 
 .sticky-header{
   position: fixed;
   padding: 5px;
   width: 100%;
-  height: 100px;
+  height: 110px;
   top: 0;
   z-index: 100;
-  box-shadow: 0 7px 20px 0 rgb(0 0 0 / 40%);
+  box-shadow: 0 8px 20px 0 rgb(0 0 0 / 60%);
 }
 
 .big-btn{
@@ -113,23 +103,41 @@
   height: 250px;
   margin: 10px;
   font-size: 46pt;
-  border-radius: 10px;
   border: 4px solid #db011c;
-  font-weight: bold;
-  color:  white;
-  background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.904), rgba(255,0,0,1));
   padding: 20px;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #db011c;;
 }
 
-.big-btn:hover{
+.btn{
+  border-radius: 10px;
+  font-weight: bold;
+  color:  white;
+  background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.904), rgba(255,0,0,1));
+}
+
+.norm-btn{
+  width: 150px;
+  height: 60px;
+  font-size: 12pt;
+}
+
+.float-left{
+  float: left;
+  position: absolute;
+  margin: 10px;
+}
+
+.btn:hover{
   background-color: black;
 }
 
 .under-header{
   position: fixed;
   top: 110px;
+  padding-top: 20px;
+  background-color: silver;
+  height: 100%;
 }
 
 .list-product-details{
@@ -152,11 +160,105 @@
   width: 100%;
 }
 
+.top{
+  vertical-align: top;
+}
+
+.left{
+  text-align: left;
+}
+
+.half{
+  width: 50%;
+}
+
 .list-product-name{
   cursor: pointer;
 }
 
-.list-product{
-  margin: 3px;
+
+.list-product:hover{
+  background-image: linear-gradient(to right, rgba(3, 3, 3, 0.904), rgba(255, 0, 0, 0.466));
+
 }
+
+.product-name{
+  font-size: 42pt;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+
+.att-name{
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.att-val{
+  font-size: 18pt;
+  font-style: italic;
+}
+
+.page-pad{
+  padding-top: 20px;
+}
+
+.page-pad-big{
+  padding-top: 70px;
+}
+
+.slim-marg{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.flex-container > div {
+  margin: 10px;
+}
+
+.image-selector{
+  width:150px;
+}
+
+.main-image{
+  width: 470px;
+}
+
+.details{
+  width: 800px;
+}
+
+.list-code{
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+}
+
+.list-name{
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #db011c;;
+}
+
+.search-bar{
+  height: 60px;
+  width: 350px;
+  font-size: 18pt;
+}
+
+.search-box{
+  text-align: left;
+  padding-left: 30px;
+}
+
 

@@ -4,7 +4,7 @@ const Button = ({text, action, big}) => {
     return (
         <div className='inline'>
             <Link to={'/'+action}>
-                <button className={big ? 'big-btn' : 'norm=btn'}>{text}</button>
+                <button className={big ? 'big-btn btn' : 'norm-btn btn'}>{text}</button>
             </Link>
         </div>
     )
